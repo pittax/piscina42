@@ -1,0 +1,7 @@
+/* git clone https://github.com/ggjulio/42header_emacs.git */
+/* cd 42header_emacs */
+/* ./set_header.sh gpittalu gpittalu@student.42barcelona.com         # usage :  ./set_header.sh [LOGIN] [MAIL] */
+/* source ~/.zshrc */
+/* cd .. */
+/* rm -rf 42header_emacs */
+
