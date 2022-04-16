@@ -6,7 +6,7 @@
 /*   By: gpittalu <gpittalu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 17:44:15 by gpittalu          #+#    #+#             */
-/*   Updated: 2022/04/16 19:34:34 by gpittalu         ###   ########.fr       */
+/*   Updated: 2022/04/16 19:50:02 by gpittalu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -30,11 +30,17 @@ int	main(int argc, char *argv[])
 	printf("\n");
 
 	//calculo de rows
-	if (x % 3 != 0)
-		i = 1;
-	else
+	if (x % 3 == 0)
 		i = 0;
-	row
+	else
+		i = 1;
+	row = x / 3 + i;
+	printf("numero de rows: %d", row);
+	printf("\n");
+	printf("valor de i: %d", i);
+	printf("\n");
+	printf("valor de x: %d", x);
+	printf("\n");
 
 
 
@@ -55,9 +61,9 @@ int	main(int argc, char *argv[])
 	//x = 5;
 
 	//malloc de la tabla de entrada
-	tab_in = (char**)malloc(x * sizeof(char*));
+	tab_in = (char**)malloc(row * sizeof(char*));
 	i = 0;
-	while (i < x)
+	while (i < row)
 	{
 		tab_in[i] = (char*)malloc(3 * sizeof(char));
 		i++;
@@ -67,7 +73,7 @@ int	main(int argc, char *argv[])
 	//inserta valores
 	i = 0;
 	d = 0;
-	while (i < x)
+	while (i < row)
 	{
 		j = 0;
 		while (j < 3)
@@ -82,12 +88,12 @@ int	main(int argc, char *argv[])
 	//prueba*************
 	//imprime la tabla
 	i = 0;
-	while (i < x)
+	while (i < row)
 	{
 		j = 0;
 		while (j < 3)
 		{
-			printf("%d", tab_in[i][j]);
+			printf("%c", tab_in[i][j]);
 			j++;
 		}
 		i++;
