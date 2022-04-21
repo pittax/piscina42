@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pittax.c                                           :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpittalu <gpittalu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/19 19:50:09 by gpittalu          #+#    #+#             */
-/*   Updated: 2022/04/19 20:05:38 by gpittalu         ###   ########.fr       */
+/*   Created: 2022/04/21 00:24:44 by gpittalu          #+#    #+#             */
+/*   Updated: 2022/04/21 00:30:10 by gpittalu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
-void	fn_square(int x, int, y int, i)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	//almacenamiento del cuadro mayor
-}
+	unsigned int	i;
+	unsigned int	l;
 
-int	fn_summation(int **map, int x, int y, int, i)
-{
-	//sumatoria del mapping
-}
-
-void fn_mapping(int **map, int size)
-{
-	int	x;
-	int	y;
-	int	i;
-	int s;
-
-	while (y + i <= size)
+	i = 0;
+	l = 0;
+	while (dest[l])
+		l++;
+	while (src[i] && i < nb)
 	{
-		while (x + i <= size)
-		{
-			s = fn_summation(**map, x, y, i);
-			if (s = 0)
-			{
-				fn_square(x, y, i);
-				i++;
-			}
-		}
+		dest[l + i] = src[i];
+		i++;
 	}
-}	
+	dest[l + i] = '\0';
+	return (dest);
+}
